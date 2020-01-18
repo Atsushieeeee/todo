@@ -1,0 +1,81 @@
+.edit-wrap{
+  width: 50%;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.edit-content{
+  height: 450px;
+  background: #FFF;
+  border-radius: 5px;
+}
+
+.edit-name-wrap{
+  text-align: center;
+}
+
+.edit-limit-wrap{
+  text-align: center;
+}
+
+.edit-status-wrap{
+  text-align: center;
+}
+
+.edit-name{
+  color: #6E6E6E;
+  height: 40px;
+  width: 90%;
+  font-size: 15px;
+}
+
+.edit-limit{
+  color: #6E6E6E;
+  height: 40px;
+  width: 90%;
+  font-size: 15px;
+}
+
+.edit-status{
+  color: #6E6E6E;
+  background: #FFF;
+  height: 40px;
+  width: 90%;
+  font-size: 15px;
+}
+
+.edit-header{
+  height: 50px;
+  width: 100%;
+  background: #E6E6E6;
+}
+
+.edit-header h2{
+  color: #6E6E6E;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 50px;
+  padding-left: 15px;
+}
+
+.edit-content h3{
+  color: #333;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.edit-add-btn-wrap{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.edit-add-btn-wrap .edit-add-btn{
+  width:25%;
+  color: #FFF;
+  background: #00BFFF;
+  height: 40px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 3px;
+}

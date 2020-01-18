@@ -1,0 +1,52 @@
+.folder-wrap{
+  width: 50%;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.folder-content{
+  height: 270px;
+  background: #FFF;
+  border-radius: 5px;
+}
+
+.folder-name-wrap{
+  text-align: center;
+}
+
+.folder-name{
+  height: 40px;
+  width: 90%;
+  font-size: 15px;
+}
+
+.folder-header{
+  height: 50px;
+  width: 100%;
+  background: #E6E6E6;
+}
+
+.folder-header h2{
+  color: #6E6E6E;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 50px;
+  padding-left: 15px;
+}
+
+.folder-content h3{
+  color: #333;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.folder-add-btn-wrap{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.folder-add-btn-wrap .folder-add-btn{
+  width:25%;
+  color: #FFF;
+  background: #00BFFF;
+}
