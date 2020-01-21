@@ -17,15 +17,11 @@
             </a>
           </div>
           <div class="main-folder-list">
-            <div class="main-folder-add">
-              <p>プライベート</p>
-            </div>
-            <div class="main-folder-add">
-              <p>仕事</p>
-            </div>
-            <div class="main-folder-add">
-              <p>旅行</p>
-            </div>
+            @foreach($folders as $folder)
+              <a href="{{ route('tasks.index', ['id' => $folder->id]) }}" class="main-folder-add">
+                <p class="main-folder-add-title  {{ $current_folder_id === $folder->id ? 'active' : '' }}">{{ $folder->title }}</p>
+              </a>
+            @endforeach
           </div>
         </div>
       </div>

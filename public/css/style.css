@@ -152,11 +152,20 @@ footer{
   height: 40px;
   line-height: 40px;
   font-size: 14px;
-  border-top: #BDBDBD solid 1px;
 }
 
-.main-folder-add p{
+.main-folder-add.active{
+  color: #FFF;
+}
+
+.main-folder-add-title{
+  border-top: #BDBDBD solid 1px;
   padding-left: 15px;
+}
+
+.main-folder-add-title.active{
+  background: #00BFFF;
+  color: #FFF;
 }
 
 /* メイン右側 */
