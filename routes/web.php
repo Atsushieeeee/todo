@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/folders/{id}/tasks', 'TaskController@index')->name('tasks.index');
 
 Route::get('/add-folder', function () {
     return view('add-folder');
