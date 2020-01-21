@@ -48,54 +48,24 @@
               </div>
             </div>
             <div class="main-task-info-list">
+            @foreach($tasks as $task)
               <div class="main-task-info-add">
-                <div class="main-task-info-add-left">
-                  <p>サンプルタスクその1</p>
-                </div>
-                <div class="main-task-info-add-right">
-                  <div class="status">
-                    <p>着手中</p>
+                  <div class="main-task-info-add-left">
+                    <p>{{ $task->title }}</p>
                   </div>
-                  <div class="date">
-                    <p>2019/1/1</p>
+                  <div class="main-task-info-add-right">
+                    <div class="status {{ $task->status_class }}">
+                      <p>{{ $task->status_label }}</p>
+                    </div>
+                    <div class="date">
+                      <p>{{ $task->formatted_due_date }}</p>
+                    </div>
+                    <div class="edit">
+                      <a href="{{url('/edit-task')}}">編集</a>
+                    </div>
                   </div>
-                  <div class="edit">
-                    <a href="{{url('/edit-task')}}">編集</a>
-                  </div>
-                </div>
               </div>
-              <div class="main-task-info-add">
-                <div class="main-task-info-add-left">
-                  <p>サンプルタスクその2</p>
-                </div>
-                <div class="main-task-info-add-right">
-                  <div class="status">
-                    <p>未着手</p>
-                  </div>
-                  <div class="date">
-                    <p>2019/1/2</p>
-                  </div>
-                  <div class="edit">
-                    <a href="{{url('/edit-task')}}">編集</a>
-                  </div>
-                </div>
-              </div>  
-              <div class="main-task-info-add">
-                <div class="main-task-info-add-left">
-                  <p>サンプルタスクその3</p>
-                </div>
-                <div class="main-task-info-add-right">
-                  <div class="status">
-                    <p>完了</p>
-                  </div>
-                  <div class="date">
-                    <p>2019/1/3</p>
-                  </div>
-                  <div class="edit">
-                    <a href="{{url('/edit-task')}}">編集</a>
-                  </div>
-                </div>
-              </div>
+              @endforeach
           </div>
         </div>
       </div>
