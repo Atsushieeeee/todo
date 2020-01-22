@@ -60,9 +60,9 @@
                     <div class="date">
                       <p>{{ $task->formatted_due_date }}</p>
                     </div>
-                    <div class="edit">
-                      <a href="{{url('/edit-task')}}">編集</a>
-                    </div>
+                    <a class="edit" href="{{ route('tasks.edit', ['id' => $task->folder_id, 'task_id' => $task->id]) }}">
+                      編集
+                    </a>
                   </div>
               </div>
               @endforeach
