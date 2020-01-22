@@ -33,8 +33,8 @@
             <h2>タスク</h2>
           </div>
           <div class="main-task-btn">
-            <a href="{{url('/add-task')}}">
-              <input type="button", value="タスクを追加する", class="task-add-btn">
+            <a href="{{ route('tasks.create', ['id' => $current_folder_id]) }}" class="task-add-btn">
+              タスクを追加する
             </a>
           </div>
           <div class="main-task-info">
