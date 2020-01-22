@@ -12,8 +12,8 @@
             <h2>フォルダ</h2>
           </div>
           <div class="main-folder-btn">
-            <a href="{{url('/add-folder')}}">
-              <input type="button", value="フォルダを追加する", class="folder-add-btn">
+            <a href="{{ route('folders.create') }}" class="folder-add-btn">
+              フォルダを追加する
             </a>
           </div>
           <div class="main-folder-list">
