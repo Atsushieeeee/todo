@@ -1,3 +1,10 @@
+<script>
+  document.getElementById('logout').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('logout-form').submit();
+  });
+</script>
+
 <header>
   <div class="header-wrap">
     <div class="header-left">
@@ -8,15 +15,18 @@
     <div class="header-right">
       <div class="header-right-info">
         <div class="header-login">
-          <!-- ユーザーのログイン状態によって変更 -->
-          <a href="{{url('/login')}}">
-            <p>ログイン</p>
-          </a>  
-        </div>
-          <!-- ユーザーのログイン状態によって変更 -->
-        <div class="header-logout">
-          <p>ログアウト</p>
-        </div>
+        @if(Auth::check())
+        <span class="my-navbar-item">ようこそ, {{ Auth::user()->name }}さん</span>
+        ｜
+        <a href="#" id="logout" class="my-navbar-item">ログアウト</a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+        </form>
+        @else
+          <a class="my-navbar-item" href="{{ route('login') }}">ログイン</a>
+          ｜
+          <a class="my-navbar-item" href="{{ route('register') }}">会員登録</a>
+        @endif
       </div>
     </div>
   </div>
