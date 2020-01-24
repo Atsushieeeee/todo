@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+
+Route::group(['middleware' => 'auth'], function() {
 
 Route::get('/folders/{id}/tasks', 'TaskController@index')->name('tasks.index');
 
@@ -24,12 +27,6 @@ Route::post('/folders/{id}/tasks/{task_id}/edit', 'TaskController@edit');
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/register', function () {
-    return view('register');
 });
 
 Route::get('/forget-password', function () {

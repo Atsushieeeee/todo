@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="{{ asset('css/add-task.css') }}">
   <link rel="stylesheet" href="{{ asset('css/edit-task.css') }}">
   <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/register.css') }}">
   <link rel="stylesheet" href="{{ asset('css/reset-password.css') }}">
   <link rel="stylesheet" href="{{ asset('css/forget-password.css') }}">
 </head>

@@ -1,0 +1,67 @@
+.register-pass-wrap{
+  width: 50%;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.register-pass-content{
+  height: 420px;
+  background: #FFF;
+  border-radius: 5px;
+}
+
+.register-pass-address-wrap{
+  text-align: center;
+}
+
+.register-pass-password-wrap{
+  text-align: center;
+}
+
+.register-pass-address{
+  height: 40px;
+  width: 90%;
+  font-size: 15px;
+}
+
+.register-pass-password{
+  height: 40px;
+  width: 90%;
+  font-size: 15px;
+}
+
+.register-pass-header{
+  height: 50px;
+  width: 100%;
+  background: #E6E6E6;
+}
+
+.register-pass-header h2{
+  color: #6E6E6E;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 50px;
+  padding-left: 15px;
+}
+
+.register-pass-content h3{
+  color: #333;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.register-pass-add-btn-wrap{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.register-pass-add-btn-wrap .register-pass-add-btn{
+  width:25%;
+  color: #FFF;
+  background: #00BFFF;
+  height: 40px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 3px;
+}
