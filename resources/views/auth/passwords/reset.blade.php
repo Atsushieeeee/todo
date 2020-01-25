@@ -8,9 +8,12 @@
       <div class="reset-pass-header">
         <h2>パスワード再発行</h2>
       </div>
+      <form action="{{ route('password.update') }}" method="POST">
+              @csrf
+      <input type="hidden" name="token" value="{{ $token }}" >
       <h3>メールアドレス</h3>
       <div class="reset-pass-address-wrap">
-        <input type="text" class="reset-pass-address">
+        <input type="text" class="reset-pass-address" value="{{ old('email', $email) }}">
       </div>
       <h3>新しいパスワード</h3>
       <div class="reset-pass-password-wrap">
@@ -21,8 +24,9 @@
         <input type="text" class="reset-pass-password">
       </div>
       <div class="reset-pass-add-btn-wrap">
-        <input type="button", value="送信", class="reset-pass-add-btn">
+        <button type="submit" class="reset-pass-add-btn">送信</button>
       </div>
+      </form>
     </div>
   </div>
 </main>
