@@ -31,10 +31,7 @@
       </form>
     </div>
     <div class="change-password">
-      <a href="{{url('/reset-password')}}">パスワードの変更はこちらから</a>
-    </div>
-    <div class="forget-password">
-      <a href="{{url('/forget-password')}}">パスワードを忘れた方はこちらから</a>
+      <a href="{{route('password.request')}}">パスワードの変更はこちらから</a>
     </div>
   </div>
 </main>
