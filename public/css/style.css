@@ -25,6 +25,24 @@ main{
   background: #F2F2F2;
 }
 
+ul, li{
+  list-style: none;
+}
+
+/* アラート */
+.alert.alert-danger p{
+  padding-left: 40px;
+  padding-top: 5px;
+}
+
+.alert.alert-danger li,.alert.alert-danger p{
+  font-size: 15px;
+  color: #ff3333;
+}
+
+
+/* アラート終わり */
+
 /* ヘッダー */
 
 header{
@@ -59,17 +77,10 @@ header{
   float: right;
   display: flex;
   flex-direction: row;
-}
-
-.header-login{
   margin-right: 10px;
 }
 
-.header-logout{
-  margin-right: 10px;
-}
-
-header p{
+.header-right-info-item{
   font-size: 12px;
 }
 
@@ -115,7 +126,7 @@ footer{
 /* メイン左側 */
 
 .main-left{
-  width: 50%;
+  width: 40%;
   padding: 50px;
 }
 
@@ -134,18 +145,18 @@ footer{
 }
 
 .main-folder-btn{
-  padding: 15px 10px;
+  margin: 15px 10px;
+  text-align: center;
+  border: 1px solid #BDBDBD;
+  border-radius: 3px;
 }
 
 .folder-add-btn{
-  width: 100%;
-  height: 40px;
-  display: inline-block;
+  display: block;
   text-decoration: none;
-  background: #FFF;/*ボタン色*/
   color: #6E6E6E;
   font-size: 15px;
-  border-radius: 3px;
+  line-height: 40px;
 }
 
 .main-folder-add{
@@ -170,7 +181,7 @@ footer{
 
 /* メイン右側 */
 .main-right{
-  width: 50%;
+  width: 60%;
   padding: 50px;
 }
 
@@ -188,18 +199,18 @@ footer{
 }
 
 .main-task-btn{
-  padding: 15px 10px;
+  margin: 15px 10px;
+  text-align: center;
+  border: 1px solid #BDBDBD;
+  border-radius: 3px;
 }
 
 .task-add-btn{
-  width: 100%;
-  height: 40px;
-  display: inline-block;
+  display: block;
   text-decoration: none;
-  background: #FFF;/*ボタン色*/
   color: #6E6E6E;
   font-size: 15px;
-  border-radius: 3px;
+  line-height: 40px;
 }
 
 .main-task-info-header{
@@ -214,7 +225,12 @@ footer{
 }
 
 .main-task-info-header-right h3{
-  padding-left: 15px;
+  padding-left: 20px;
+  color: #696969;
+}
+
+.main-task-info-header-right h3:last-child{
+  padding-left: 60px;
 }
 
 .main-task-info-header-left{
@@ -223,6 +239,7 @@ footer{
 
 .main-task-info-header-left h3{
   padding-left: 15px;
+  color: #696969;
 }
 
 .main-task-info-header-right{

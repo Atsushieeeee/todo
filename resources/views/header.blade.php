@@ -7,20 +7,18 @@
     </div>
     <div class="header-right">
       <div class="header-right-info">
-        <div class="header-login">
         @if(Auth::check())
-        <span class="my-navbar-item">ようこそ, {{ Auth::user()->name }}さん</span>
+        <span class="header-right-info-item">ようこそ, {{ Auth::user()->name }}さん</span>
         ｜
-        <a href="#" id="logout" class="my-navbar-item">ログアウト</a>
+        <a href="#" id="logout" class="header-right-info-item">ログアウト</a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         @csrf
         </form>
         @else
-          <a class="my-navbar-item" href="{{ route('login') }}">ログイン</a>
+          <a class="header-right-info-item" href="{{ route('login') }}">ログイン</a>
           ｜
-          <a class="my-navbar-item" href="{{ route('register') }}">会員登録</a>
+          <a class="header-right-info-item" href="{{ route('register') }}">会員登録</a>
         @endif
-      </div>
     </div>
   </div>
 </header>

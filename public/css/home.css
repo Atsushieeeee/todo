@@ -1,0 +1,33 @@
+.home-wrap{
+  width: 50%;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.home-header{
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.home-header p{
+  font-size: 15px;
+  line-height: 50px;
+}
+
+.home-body-btn-wrap{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.home-body-btn{
+  width: 75%;
+  height:40px;
+  font-size: 15px;
+  display: block;
+  color: #FFF;
+  background: #00BFFF;
+  margin: 0 auto;
+  border-radius: 3px;
+  line-height: 40px;
+}

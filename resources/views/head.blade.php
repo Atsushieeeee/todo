@@ -5,6 +5,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://unpkg.com/sanitize.css">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/home.css') }}">
   <link rel="stylesheet" href="{{ asset('css/add-folder.css') }}">
   <link rel="stylesheet" href="{{ asset('css/add-task.css') }}">
   <link rel="stylesheet" href="{{ asset('css/edit-task.css') }}">

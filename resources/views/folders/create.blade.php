@@ -24,7 +24,7 @@
           <input type="text" class="folder-name" name="title" id="title" value="{{ old('title') }}">
         </div>
         <div class="folder-add-btn-wrap">
-          <button type="submit", value="送信", class="folder-add-btn">
+          <input type="submit", value="送信", class="folder-add-btn">
         </div>
       </form>
     </div>
