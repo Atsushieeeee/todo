@@ -5,7 +5,7 @@
 }
 
 .folder-content{
-  height: 270px;
+  height: 360px;
   background: #FFF;
   border-radius: 5px;
 }
@@ -14,7 +14,17 @@
   text-align: center;
 }
 
+.folder-limit-wrap{
+  text-align: center;
+}
+
 .folder-name{
+  height: 40px;
+  width: 90%;
+  font-size: 15px;
+}
+
+.folder-limit{
   height: 40px;
   width: 90%;
   font-size: 15px;
@@ -46,7 +56,10 @@
 }
 
 .folder-add-btn-wrap .folder-add-btn{
+  height: 40px;
   width:25%;
   color: #FFF;
   background: #00BFFF;
+  margin: 0 auto;
+  border-radius: 3px;
 }
