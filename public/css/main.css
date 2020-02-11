@@ -1,0 +1,49 @@
+.folder36-name{
+  height: 40px;
+  width: 80%;
+  margin: 5px auto;
+
+}
+
+.folder36-add{
+  display: block;
+  text-decoration: none;
+  color: #6E6E6E;
+  font-size: 15px;
+  line-height: 40px;
+  width: 80%;
+  margin: 5px auto;
+  border-radius: 3px;
+}
+
+.cookie-text{
+  font-size: 14px;
+  color: #fff;
+  font-weight: normal;
+  background:#00BFFF;
+  text-align: left;
+  margin: 5px;
+  padding-left: 5px;
+}
+
+.task36-name{
+  height: 40px;
+  width: 80%;
+  margin: 5px auto;
+
+}
+
+.task36-add{
+  display: block;
+  text-decoration: none;
+  color: #6E6E6E;
+  font-size: 15px;
+  line-height: 40px;
+  width: 80%;
+  margin: 5px auto;
+  border-radius: 3px;
+}
+
+.hide{
+  display: none;
+}
