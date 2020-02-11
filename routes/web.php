@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\TaskController;
+
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/', 'HomeController@index')->name('home');
 
@@ -18,3 +20,5 @@ Route::group(['middleware' => 'auth'], function() {
 });
 
 Auth::routes();
+
+Route::view('/main',"main");
