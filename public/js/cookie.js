@@ -142,20 +142,49 @@ $(function(){
     const task = document.getElementById("task-name").value
     if (Cookies.get("taskName1") == null){
       Cookies.set("taskName1", task,{ expires: time })
-      const html1 = '<p id="cookieTask1">' + Cookies.get("taskName1") + '<button id="delete" value="削除">削除</button></p>';
-      $('.main-task-info-add').append(html1);
+      const html1 = '<p id="cookieTask-text1">' + Cookies.get("taskName1") + '<button class="delete-task1" id="delete" value="削除">削除</button></p>';
+      $("#cookieTask1").show();
+      $('#cookieTask1').append(html1);
+      // $('.main-task-info-add').append(html1);
     }else if(Cookies.get("taskName2") == null){
       Cookies.set("taskName2", task,{ expires: time })
-      const html2 = '<p id="cookieTask2">' + Cookies.get("taskName2") + '<button id="delete" value="削除">削除</button></p>';
-      $('.main-task-info-add').append(html2);
+      const html2 = '<p id="cookieTask-text2">' + Cookies.get("taskName2") + '<button class="delete-task2" id="delete" value="削除">削除</button></p>';
+      $("#cookieTask2").show();
+      $('#cookieTask2').append(html2);
     }else{
       Cookies.set("taskName3", task,{ expires: time })
-      const html3 = '<p id="cookieTask3">' + Cookies.get("taskName3") + '<button id="delete" value="削除">削除</button></p>';
-      $('.main-task-info-add').append(html3);
+      const html3 = '<p id="cookieTask-text3">' + Cookies.get("taskName3") + '<button class="delete-task3" id="delete" value="削除">削除</button></p>';
+      $("#cookieTask3").show();
+      $('#cookieTask3').append(html3);
     }
     
+    // タスク追加後にページ更新せずに削除する場合
+    $('.delete-task1').click(function(){
+      Cookies.remove("taskName1");
+      Cookies.remove("setTime1");
+      cookieTask1.innerHTML = "";
+      settime1.innerHTML = "";
+      $("#cookieTask1").hide();
+    });
+    $('.delete-task2').click(function(){
+      Cookies.remove("taskName2");
+      Cookies.remove("setTime2");
+      cookieTask2.innerHTML = "";
+      settime2.innerHTML = "";
+      $("#cookieTask2").hide();
+    });
+    $('.delete-task3').click(function(){
+      Cookies.remove("taskName3");
+      Cookies.remove("setTime3");
+      cookieTask3.innerHTML = "";
+      settime3.innerHTML = "";
+      $("#cookieTask3").hide();
+    });
+    // 削除部分終わり
     
   })  
+
+
       if (Cookies.get("taskName1") != null){
         cookieTask1.innerHTML = '<p id="cookieTask-text1">' + Cookies.get("taskName1") + '</p>' + '<button class="delete-task1" id="delete" value="削除">削除</button>';
         $("#cookieTask1").show();
@@ -200,14 +229,33 @@ $(function(){
   //     $("settime").hide();
   // }
 
-
-  $('#delete').click(function(){
-    Cookies.remove("name");
-    Cookies.remove("time");
-    num1.innerHTML = "";
-    settime.innerHTML = "";
+  
+  // タスク削除部
+  $('.delete-task1').click(function(){
+    Cookies.remove("taskName1");
+    Cookies.remove("setTime1");
     location.reload();
   })
+  $('.delete-task2').click(function(){
+    Cookies.remove("taskName2");
+    Cookies.remove("setTime2");
+    location.reload();
+  });
+  $('.delete-task3').click(function(){
+    Cookies.remove("taskName3");
+    Cookies.remove("setTime3");
+    location.reload();
+  });
+  // タスク削除機能終わり
+  
+
+  // $('#delete').click(function(){
+  //   Cookies.remove("name");
+  //   Cookies.remove("time");
+  //   num1.innerHTML = "";
+  //   settime.innerHTML = "";
+  //   location.reload();
+  // })
   // if (Cookies.get("name") != null){
   //   $(".main-task-info-add-left").remove();
   //   $("#time").remove();
@@ -216,7 +264,7 @@ $(function(){
   
 })
 
-// フォルダ追加機能
+// --------------------フォルダ追加機能--------------------
 $(function(){
   // フォルダ追加を押した場合にCookieが保存される
   $("#submit-folder").click(function(){
@@ -295,6 +343,6 @@ $(function(){
     Cookies.remove("folderName3");
     location.reload();
   });
-  // フォルダ追加機能終わり
-  
+  // フォルダ削除機能終わり
 })
+// --------------------フォルダ追加機能終わり--------------------
