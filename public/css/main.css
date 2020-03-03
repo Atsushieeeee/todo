@@ -83,6 +83,20 @@
   margin: 15px 10px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+.task36-name{
+  width: 50%;
+}
+
+.task36-submit{
+  width: 120px;
+  font-weight: bold;
+  background: #00BFFF;
+  color: #FFF;
+  border-radius: 3px;
+  font-size: 13px;
 }
 
 #task-name{
@@ -99,6 +113,17 @@
   color: #FFF;
   font-weight: bold;
   font-size: 14px;
+}
+
+.cookieTask-add{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.main36-task-info-list{
+  /* display: flex;
+  flex-direction: row; */
 }
 
 /*タブ切り替え全体のスタイル*/
@@ -162,3 +187,44 @@ input[name="tab_item"] {
 #content1,#content2,#content3{
   display: none;
 }
+
+
+.select_time input{
+      display: none;
+  }
+.select_time label{
+      display: block;
+      float: left;
+      cursor: pointer;
+      width: 80px;
+      margin: 0;
+      padding: 12px 5px;
+      border-right: 1px solid #abb2b7;
+      background: #bdc3c7;
+      color: #555e64;
+      font-size: 14px;
+      text-align: center;
+      line-height: 1;
+      transition: .2s;
+  }
+  .select_time label:first-of-type{
+      border-radius: 3px 0 0 3px;
+  }
+  .select_time label:last-of-type{
+      border-right: 0px;
+      border-radius: 0 3px 3px 0;
+  }
+  .select_time input[type="radio"]:checked + label[for="select1"], .select_time input[type="radio"]:checked + label[for="select4"], .select_time input[type="radio"]:checked + label[for="select7"]{
+      background-color: #d8b311;
+      color: #fff;
+  }
+
+  .select_time input[type="radio"]:checked + label[for="select2"], .select_time input[type="radio"]:checked + label[for="select5"], .select_time input[type="radio"]:checked + label[for="select8"]  {
+    background-color: #1eb94d;
+    color: #fff;
+  }
+
+  .select_time input[type="radio"]:checked + label[for="select3"], .select_time input[type="radio"]:checked + label[for="select6"], .select_time input[type="radio"]:checked + label[for="select9"] {
+    background-color: #2690ce;
+    color: #fff;
+  }
