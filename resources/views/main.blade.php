@@ -20,9 +20,6 @@
         </div>
       </div>
     </div>
-
-    <div id="cookie36test"></div>
-
     <div class="main-down">
       <div class="tabs">
       <input id="all" type="radio" name="tab_item" checked>
@@ -47,12 +44,14 @@
             <input type="submit" value="追加" class="task36-submit" id="submit-task1" class="set">
           </div>
           <div class="main-task-info">
-            <div class="main-task-info-header">
-              <div class="main-task-info-header-left">
+            <div class="main36-task-info-header">
+              <div class="main-task-info-header-title">
                 <h3>タイトル</h3>
               </div>
-              <div class="main-task-info-header-right">
+              <div class="main-task-info-header-settime">
                 <h3>期限</h3>
+              </div>
+              <div class="main-task-info-header-delete">
                 <h3>削除</h3>
               </div>
             </div>
@@ -85,15 +84,17 @@
             <input type="submit" value="追加" class="task36-submit" id="submit-task2" class="set">
           </div>
             <div class="main-task-info">
-              <div class="main-task-info-header">
-                <div class="main-task-info-header-left">
-                  <h3>タイトル</h3>
-                </div>
-                <div class="main-task-info-header-right">
-                  <h3>期限</h3>
-                  <h3>削除</h3>
-                </div>
+            <div class="main36-task-info-header">
+              <div class="main-task-info-header-title">
+                <h3>タイトル</h3>
               </div>
+              <div class="main-task-info-header-settime">
+                <h3>期限</h3>
+              </div>
+              <div class="main-task-info-header-delete">
+                <h3>削除</h3>
+              </div>
+            </div>
               <div class="main36-task-info-list">
                 <div id="main_task_info_add">
                   <div id="cookieTask6" class="hide"></div>
@@ -123,15 +124,17 @@
             <input type="submit" value="追加" class="task36-submit" id="submit-task3" class="set">
           </div>
             <div class="main-task-info">
-              <div class="main-task-info-header">
-                <div class="main-task-info-header-left">
-                  <h3>タイトル</h3>
-                </div>
-                <div class="main-task-info-header-right">
-                  <h3>期限</h3>
-                  <h3>削除</h3>
-                </div>
+            <div class="main36-task-info-header">
+              <div class="main-task-info-header-title">
+                <h3>タイトル</h3>
               </div>
+              <div class="main-task-info-header-settime">
+                <h3>期限</h3>
+              </div>
+              <div class="main-task-info-header-delete">
+                <h3>削除</h3>
+              </div>
+            </div>
               <div class="main36-task-info-list">
                 <div id="main_task_info_add">
                   <div id="cookieTask11" class="hide"></div>
