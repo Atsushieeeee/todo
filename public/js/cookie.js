@@ -2,6 +2,7 @@
 $(function(){  
 
   $("#submit-task1").click(function(){  
+
     const set = $('#time1 input[name="hr"]:checked').val();
     const time = Number(set);
     
@@ -121,45 +122,47 @@ $(function(){
         }
         var min = ("0" + now.getMinutes()).slice(-2);
   
-        var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" ; 
+        var s = year + "-" + mon + "-" + day + " " + hour + ":" + min ; 
         return s;
     }
 
-    function getRimit(){
-      var mTime = rimitTime.substring( 0, 4 ) + "-"  + rimitTime.substring( 4, 6) + "-" + rimitTime.substring( 6, 8 ) + " " + rimitTime.substring( 8, 10 ) + ":" + rimitTime.substring( 10, 12 );
+    function getLimit(){
+      var mTime = limitTime.substring( 0, 4 ) + "-"  + limitTime.substring( 4, 6) + "-" + limitTime.substring( 6, 8 ) + " " + limitTime.substring( 8, 10 ) + ":" + limitTime.substring( 10, 12 );
       var m_now = moment()
-      var m_rimit = moment(mTime)
-      var rimit = "残り" + m_rimit.diff(m_now,'hours') + "時間"
-      return rimit
+      var m_limit = moment(mTime)
+      var limit = "残り" + m_limit.diff(m_now,'hours') + "時間"
+      return limit
     }
 
     const task = document.getElementById("task-name1").value
     if (Cookies.get("taskName1") == null){
       Cookies.set("taskName1", task,{ expires: time })
-      var rimitTime = (Cookies.get("setTime1")).replace(/[^0-9]/g, '');
-      const html1 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName1") + '</p>' + '<div class=task36rimit>' + getRimit() + '</div>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime1") +'</p><button class="delete-task1" id="delete" value="削除">削除</button> </div>';  
+      var limitTime = (Cookies.get("setTime1")).replace(/[^0-9]/g, '');
+      const html1 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName1") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime1") +'</p><button class="delete-task1" id="delete" value="削除">削除</button> </div>';  
       $("#cookieTask1").show();
       $('#cookieTask1').append(html1);
     }else if(Cookies.get("taskName2") == null){
       Cookies.set("taskName2", task,{ expires: time })
-      var rimitTime = (Cookies.get("setTime2")).replace(/[^0-9]/g, '');
-
-      const html2 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName2") + '</p>' + '<div class=task36rimit>' + getRimit() + '</div>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime2") +'</p><button class="delete-task2" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime2")).replace(/[^0-9]/g, '');
+      const html2 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName2") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime2") +'</p><button class="delete-task2" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask2").show();
       $('#cookieTask2').append(html2);
     }else if(Cookies.get("taskName3") == null){
       Cookies.set("taskName3", task,{ expires: time })
-      const html3 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName3") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime3") +'</p><button class="delete-task3" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime3")).replace(/[^0-9]/g, '');
+      const html3 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName3") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime3") +'</p><button class="delete-task3" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask3").show();
       $('#cookieTask3').append(html3);
     }else if(Cookies.get("taskName4") == null){
       Cookies.set("taskName4", task,{ expires: time })
-      const html4 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName4") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime4") +'</p><button class="delete-task4" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime4")).replace(/[^0-9]/g, '');
+      const html4 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName4") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime4") +'</p><button class="delete-task4" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask4").show();
       $('#cookieTask4').append(html4);
     }else if(Cookies.get("taskName5") == null){
       Cookies.set("taskName5", task,{ expires: time })
-      const html5 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName5") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime5") +'</p><button class="delete-task5" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime5")).replace(/[^0-9]/g, '');
+      const html5 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName5") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime5") +'</p><button class="delete-task5" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask5").show();
       $('#cookieTask5').append(html5);
     }else{
@@ -324,37 +327,49 @@ $(function(){
       }
       var min = ("0" + now.getMinutes()).slice(-2);
 
-      var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" ; 
+      var s = year + "-" + mon + "-" + day + " " + hour + ":" + min ; 
       return s;
   }
 
+  function getLimit(){
+    var mTime = limitTime.substring( 0, 4 ) + "-"  + limitTime.substring( 4, 6) + "-" + limitTime.substring( 6, 8 ) + " " + limitTime.substring( 8, 10 ) + ":" + limitTime.substring( 10, 12 );
+    var m_now = moment()
+    var m_limit = moment(mTime)
+    var limit = "残り" + m_limit.diff(m_now,'hours') + "時間"
+    return limit
+  }
 
     // ---------------------------------日付の取得終わり---------------------------------
 
     const task = document.getElementById("task-name2").value
     if (Cookies.get("taskName6") == null){
       Cookies.set("taskName6", task,{ expires: time })
-      const html1 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName6") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime6") +'</p><button class="delete-task6" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime6")).replace(/[^0-9]/g, '');
+      const html1 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName6") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime6") +'</p><button class="delete-task6" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask6").show();
       $('#cookieTask6').append(html1);
     }else if(Cookies.get("taskName7") == null){
       Cookies.set("taskName7", task,{ expires: time })
-      const html2 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName7") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime7") +'</p><button class="delete-task7" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime7")).replace(/[^0-9]/g, '');
+      const html2 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName7") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime7") +'</p><button class="delete-task7" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask7").show();
       $('#cookieTask7').append(html2);
     }else if(Cookies.get("taskName8") == null){
       Cookies.set("taskName8", task,{ expires: time })
-      const html3 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName8") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime8") +'</p><button class="delete-task8" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime8")).replace(/[^0-9]/g, '');
+      const html3 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName8") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime8") +'</p><button class="delete-task8" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask8").show();
       $('#cookieTask8').append(html3);
     }else if(Cookies.get("taskName9") == null){
       Cookies.set("taskName9", task,{ expires: time })
-      const html4 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName9") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime9") +'</p><button class="delete-task9" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime9")).replace(/[^0-9]/g, '');
+      const html4 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName9") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime9") +'</p><button class="delete-task9" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask9").show();
       $('#cookieTask9').append(html4);
     }else if(Cookies.get("taskName10") == null){
       Cookies.set("taskName10", task,{ expires: time })
-      const html5 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName10") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime10") +'</p><button class="delete-task10" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime10")).replace(/[^0-9]/g, '');
+      const html5 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName10") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime10") +'</p><button class="delete-task10" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask10").show();
       $('#cookieTask10').append(html5);
     }else{
@@ -395,7 +410,6 @@ $(function(){
     });
 
     // 削除部分終わり
-    
   })  
 
     // *****************************************タスク2*****************************************
@@ -524,37 +538,49 @@ $(function(){
       }
       var min = ("0" + now.getMinutes()).slice(-2);
 
-      var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" ; 
+      var s = year + "-" + mon + "-" + day + " " + hour + ":" + min ; 
       return s;
   }
 
+  function getLimit(){
+    var mTime = limitTime.substring( 0, 4 ) + "-"  + limitTime.substring( 4, 6) + "-" + limitTime.substring( 6, 8 ) + " " + limitTime.substring( 8, 10 ) + ":" + limitTime.substring( 10, 12 );
+    var m_now = moment()
+    var m_limit = moment(mTime)
+    var limit = "残り" + m_limit.diff(m_now,'hours') + "時間"
+    return limit
+  }
 
     // ---------------------------------日付の取得終わり---------------------------------
 
     const task = document.getElementById("task-name3").value
     if (Cookies.get("taskName11") == null){
       Cookies.set("taskName11", task,{ expires: time })
-      const html1 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName11") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime11") +'</p><button class="delete-task11" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime11")).replace(/[^0-9]/g, '');
+      const html1 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName11") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime11") +'</p><button class="delete-task11" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask11").show();
       $('#cookieTask11').append(html1);
     }else if(Cookies.get("taskName12") == null){
       Cookies.set("taskName12", task,{ expires: time })
-      const html2 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName12") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime12") +'</p><button class="delete-task12" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime12")).replace(/[^0-9]/g, '');
+      const html2 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName12") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime12") +'</p><button class="delete-task12" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask12").show();
       $('#cookieTask12').append(html2);
     }else if(Cookies.get("taskName13") == null){
       Cookies.set("taskName13", task,{ expires: time })
-      const html3 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName13") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime13") +'</p><button class="delete-task13" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime13")).replace(/[^0-9]/g, '');
+      const html3 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName13") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime13") +'</p><button class="delete-task13" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask13").show();
       $('#cookieTask13').append(html3);
     }else if(Cookies.get("taskName14") == null){
       Cookies.set("taskName14", task,{ expires: time })
-      const html4 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName14") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime14") +'</p><button class="delete-task14" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime14")).replace(/[^0-9]/g, '');
+      const html4 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName14") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime14") +'</p><button class="delete-task14" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask14").show();
       $('#cookieTask14').append(html4);
     }else if(Cookies.get("taskName15") == null){
       Cookies.set("taskName15", task,{ expires: time })
-      const html5 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName15") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime15") +'</p><button class="delete-task15" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime15")).replace(/[^0-9]/g, '');
+      const html5 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName15") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime15") +'</p><button class="delete-task15" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask15").show();
       $('#cookieTask15').append(html5);
     }else{
@@ -595,7 +621,6 @@ $(function(){
     });
 
     // 削除部分終わり
-    
   })  
 
     // *****************************************タスク3*****************************************
@@ -604,24 +629,25 @@ $(function(){
 
 
 // タスク追加を押さない場合でもタスクが表示されるようにする
-    function getRimit(){
-      var mTime = rimitTime.substring( 0, 4 ) + "-"  + rimitTime.substring( 4, 6) + "-" + rimitTime.substring( 6, 8 ) + " " + rimitTime.substring( 8, 10 ) + ":" + rimitTime.substring( 10, 12 );
+    function getLimit(){
+      var mTime = limitTime.substring( 0, 4 ) + "-"  + limitTime.substring( 4, 6) + "-" + limitTime.substring( 6, 8 ) + " " + limitTime.substring( 8, 10 ) + ":" + limitTime.substring( 10, 12 );
       var m_now = moment()
-      var m_rimit = moment(mTime)
-      var rimit = "残り" + m_rimit.diff(m_now,'hours') + "時間"
-      return rimit
+      var m_limit = moment(mTime)
+      var limit = "残り" + m_limit.diff(m_now,'hours') + "時間"
+      return limit
     }
 
     if (Cookies.get("taskName1") != null){
-      var rimitTime = (Cookies.get("setTime1")).replace(/[^0-9]/g, '');
-      const html1 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName1") + '</p>' + '<div class=task36rimit>' + getRimit() + '</div>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime1") +'</p><button class="delete-task1" id="delete" value="削除">削除</button> </div>';  
+      var limitTime = (Cookies.get("setTime1")).replace(/[^0-9]/g, '');
+      const html1 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName1") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime1") +'</p><button class="delete-task1" id="delete" value="削除">削除</button> </div>';  
       $("#cookieTask1").show();
       $("#cookieTask1").append(html1);
     }else{
         $("#cookieTask1").hide();
     }
     if (Cookies.get("taskName2") != null){
-      const html2 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName2") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime2") +'</p><button class="delete-task2" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime2")).replace(/[^0-9]/g, '');
+      const html2 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName2") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime2") +'</p><button class="delete-task2" id="delete" value="削除">削除</button> </div>';
         $("#cookieTask2").show()
         $("#cookieTask2").append(html2);
 
@@ -629,7 +655,8 @@ $(function(){
         $("#cookieTask2").hide();
     }
     if (Cookies.get("taskName3") != null){
-      const html3 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName3") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime3") +'</p><button class="delete-task3" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime3")).replace(/[^0-9]/g, '');
+      const html3 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName3") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime3") +'</p><button class="delete-task3" id="delete" value="削除">削除</button> </div>';
         $("#cookieTask3").show();
         $("#cookieTask3").append(html3);
 
@@ -637,7 +664,8 @@ $(function(){
         $("#cookieTask3").hide();
     }
     if (Cookies.get("taskName4") != null){
-      const html4 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName4") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime4") +'</p><button class="delete-task4" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime4")).replace(/[^0-9]/g, '');
+      const html4 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName4") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime4") +'</p><button class="delete-task4" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask4").show();
       $("#cookieTask4").append(html4);
 
@@ -645,25 +673,14 @@ $(function(){
         $("#cookieTask4").hide();
     }
     if (Cookies.get("taskName5") != null){
-      const html5 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName5") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime5") +'</p><button class="delete-task5" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime5")).replace(/[^0-9]/g, '');
+      const html5 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName5") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime5") +'</p><button class="delete-task5" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask5").show();
       $("#cookieTask5").append(html5);
 
     }else{
         $("#cookieTask5").hide();
     }
-
-    // var cookieTime = (Cookies.get("setTime1")).replace(/[^0-9]/g, '')
-    // var now = new Date();
-    // var year = now.getFullYear();
-    // var mon = ("0" + (now.getMonth()+1)).slice(-2);
-    // var day = ("0" + now.getDate()).slice(-2);
-    // var hour = ("0" + now.getHours()).slice(-2);
-    // var min = ("0" + now.getMinutes()).slice(-2);
-    // var nowDate = year + mon + day + hour + min; 
-
-    // cookie36test.innerHTML = cookieTime - nowDate
-
   
   // タスク削除部
   $('.delete-task1').click(function(){
@@ -695,14 +712,16 @@ $(function(){
 
   // タスク追加を押さない場合でもタスクが表示されるようにする
   if (Cookies.get("taskName6") != null){
-    const html1 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName6") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime6") +'</p><button class="delete-task6" id="delete" value="削除">削除</button> </div>';
+    var limitTime = (Cookies.get("setTime6")).replace(/[^0-9]/g, '');
+    const html1 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName6") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime6") +'</p><button class="delete-task6" id="delete" value="削除">削除</button> </div>';
     $("#cookieTask6").show();
     $("#cookieTask6").append(html1)
   }else{
       $("#cookieTask6").hide();
   }
   if (Cookies.get("taskName7") != null){
-    const html2 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName7") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime7") +'</p><button class="delete-task7" id="delete" value="削除">削除</button> </div>';
+    var limitTime = (Cookies.get("setTime7")).replace(/[^0-9]/g, '');
+    const html2 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName7") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime7") +'</p><button class="delete-task7" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask7").show()
       $("#cookieTask7").append(html2)
 
@@ -710,7 +729,8 @@ $(function(){
       $("#cookieTask7").hide();
   }
   if (Cookies.get("taskName8") != null){
-    const html3 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName8") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime8") +'</p><button class="delete-task8" id="delete" value="削除">削除</button> </div>';
+    var limitTime = (Cookies.get("setTime8")).replace(/[^0-9]/g, '');
+    const html3 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName8") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime8") +'</p><button class="delete-task8" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask8").show();
       $("#cookieTask8").append(html3)
 
@@ -718,7 +738,8 @@ $(function(){
       $("#cookieTask8").hide();
   }
   if (Cookies.get("taskName9") != null){
-    const html4 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName9") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime9") +'</p><button class="delete-task9" id="delete" value="削除">削除</button> </div>';
+    var limitTime = (Cookies.get("setTime9")).replace(/[^0-9]/g, '');
+    const html4 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName9") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime9") +'</p><button class="delete-task9" id="delete" value="削除">削除</button> </div>';
     $("#cookieTask9").show();
     $("#cookieTask9").append(html4)
 
@@ -726,7 +747,8 @@ $(function(){
       $("#cookieTask9").hide();
   }
   if (Cookies.get("taskName10") != null){
-    const html5 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName10") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime10") +'</p><button class="delete-task10" id="delete" value="削除">削除</button> </div>';
+    var limitTime = (Cookies.get("setTime10")).replace(/[^0-9]/g, '');
+    const html5 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName10") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime10") +'</p><button class="delete-task10" id="delete" value="削除">削除</button> </div>';
     $("#cookieTask10").show();
     $("#cookieTask10").append(html5)
 
@@ -764,21 +786,24 @@ $('.delete-task10').click(function(){
 
   // タスク追加を押さない場合でもタスクが表示されるようにする
   if (Cookies.get("taskName11") != null){
-    const html1 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName11") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime11") +'</p><button class="delete-task11" id="delete" value="削除">削除</button> </div>';
+    var limitTime = (Cookies.get("setTime11")).replace(/[^0-9]/g, '');
+    const html1 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName11") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime11") +'</p><button class="delete-task11" id="delete" value="削除">削除</button> </div>';
     $("#cookieTask11").show();
     $("#cookieTask11").append(html1);
   }else{
       $("#cookieTask11").hide();
   }
   if (Cookies.get("taskName12") != null){
-      const html2 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName12") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime12") +'</p><button class="delete-task12" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime12")).replace(/[^0-9]/g, '');
+      const html2 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName12") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime12") +'</p><button class="delete-task12" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask12").show();
       $("#cookieTask12").append(html2);
     }else{
       $("#cookieTask12").hide();
   }
   if (Cookies.get("taskName13") != null){
-      const html3 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName13") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime13") +'</p><button class="delete-task13" id="delete" value="削除">削除</button> </div>';
+      var limitTime = (Cookies.get("setTime13")).replace(/[^0-9]/g, '');
+      const html3 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName13") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime13") +'</p><button class="delete-task13" id="delete" value="削除">削除</button> </div>';
       $("#cookieTask13").show();
       $("#cookieTask13").append(html3);
 
@@ -786,7 +811,8 @@ $('.delete-task10').click(function(){
       $("#cookieTask13").hide();
   }
   if (Cookies.get("taskName14") != null){
-    const html4 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName14") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime14") +'</p><button class="delete-task14" id="delete" value="削除">削除</button> </div>';
+    var limitTime = (Cookies.get("setTime14")).replace(/[^0-9]/g, '');
+    const html4 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName14") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime14") +'</p><button class="delete-task14" id="delete" value="削除">削除</button> </div>';
     $("#cookieTask14").show();
     $("#cookieTask14").append(html4);
 
@@ -794,7 +820,8 @@ $('.delete-task10').click(function(){
       $("#cookieTask14").hide();
   }
   if (Cookies.get("taskName15") != null){
-    const html5 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName15") + '</p>' + '<p class="cookieTask_rimit">' +  Cookies.get("setTime15") +'</p><button class="delete-task15" id="delete" value="削除">削除</button> </div>';
+    var limitTime = (Cookies.get("setTime15")).replace(/[^0-9]/g, '');
+    const html5 = '<div class="cookieTask-add"><p class="cookieTask-text">' + Cookies.get("taskName15") + '</p>' + '<div class=task36limit>' + getLimit() + '</div>' + '<p class="cookieTask_limit">' +  Cookies.get("setTime15") +'</p><button class="delete-task15" id="delete" value="削除">削除</button> </div>';
     $("#cookieTask15").show();
     $("#cookieTask15").append(html5);
 
@@ -843,6 +870,10 @@ $('.delete-task15').click(function(){
 $(function(){
   // フォルダ追加を押した場合にCookieが保存される
   $("#submit36-folder").click(function(){
+    if ((document.getElementById("folder36-name").value) == ""){
+      !confirm("フォルダ名を入力、選択してください")
+    }else{
+
     const folder = document.getElementById("folder36-name").value
     // フォルダ追加部分
     if (Cookies.get("folderName1") == null){
@@ -855,14 +886,15 @@ $(function(){
       tab_name2.innerHTML = '<p id="cookieFolder-text2">' + Cookies.get("folderName2") + '</p>' + '<button class="delete-folder2" id="delete-folder" value="削除">削除</button>';
       $("#tab2").show();
       $("#content2").show();
-
-    }else{
+    }else if(Cookies.get("folderName3") == null){
       Cookies.set("folderName3", folder)
       tab_name3.innerHTML = '<p id="cookieFolder-text3">' + Cookies.get("folderName3") + '</p>' + '<button class="delete-folder3" id="delete-folder" value="削除">削除</button>';
       $("#tab3").show();
       $("#content3").show();
-
+    }else{
+      !confirm("これ以上フォルダを追加出来ません")
     } 
+  }
     // フォルダ追加終わり
 
     // フォルダ追加後にページ更新せずに削除する場合
