@@ -66,7 +66,7 @@
 
 #cookieFolder-text1, #cookieFolder-text2, #cookieFolder-text3{
   width: 75%;
-  color: #696969;
+  color: #00BFFF;
   padding-left:10px ;
 }
 
@@ -74,8 +74,8 @@
 #delete-folder{
   width: 20%;
   margin: 5px 5px ;
-  background: #e83929;
-  color: #FFF;
+  background: #BDBDBD;
+  color: ;
   border-radius: 3px;
 }
 
@@ -116,9 +116,63 @@
 }
 
 .cookieTask-add{
+  height: 50px;
+  padding: 5px 20px;
+  border-top: 1px solid #BDBDBD;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  line-height: 40px;
+  color: #696969;
+}
+
+.main36-task-info-header{
+  height: 30px;
+  padding: 5px 0;
+  line-height: 20px;
+  display: flex;
+  flex-direction: row;
+  border-top: #BDBDBD solid 1px;
+  /* justify-content: space-around; */
+  font-size: 14px;
+  color: #696969;
+}
+
+.main-task-info-header-title{
+  width: 55%;
+  text-align: center;
+}
+
+.main-task-info-header-settime{
+  width: 35%;
+  text-align: center;
+}
+
+.main-task-info-header-delete{
+  width: 10%;
+  text-align: center;
+}
+
+.task36limit{
+  font-size: 12px;
+  width: 15%;
+}
+
+.cookieTask_limit{
+  font-size: 12px;
+  width: 15%;
+}
+
+.cookieTask-text{
+  width: 55%;
+}
+
+#delete{
+  width: 40px;
+  margin: 5px 5px;
+  background: #BDBDBD;
+  color: #424242;
+  border-radius: 3px;
 }
 
 .main36-task-info-list{
@@ -141,7 +195,7 @@
 .tab_item {
   width: calc(100%/3);
   height: 50px;
-  border-bottom: 3px solid #5ab4bd;
+  border-bottom: 3px solid #424242;
   background-color: #d9d9d9;
   line-height: 50px;
   font-size: 16px;
@@ -165,7 +219,7 @@ input[name="tab_item"] {
 /*タブ切り替えの中身のスタイル*/
 .tab_content {
   display: none;
-  padding: 40px 40px 0;
+  /* padding: 40px 40px 0; */
   clear: both;
   overflow: hidden;
 }
@@ -180,7 +234,7 @@ input[name="tab_item"] {
 
 /*選択されているタブのスタイルを変える*/
 .tabs input:checked + .tab_item {
-  background-color: #5ab4bd;
+  background-color: #424242;
   color: #fff;
 }
 
