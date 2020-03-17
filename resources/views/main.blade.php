@@ -1,16 +1,32 @@
 @extends('layouts.common')
 @include('head')
-@include('header')
+<div class="overlay">
+  <div class="btn_area">
+    <div class="site_title">
+      <img src="img/36todo.png" alt="">
+    </div>
+    <div class="site_info">
+      <div class="site_info_text">
+        <li>このサイトではCookieを利用しています。</li>
+        <li>ブラウザでCookieの使用、保存期間などを個人で設定している場合<br>正常に機能しない場合がございます。</li>
+      </div>
+    </div>
+    <div class="site_use">
+      <button>利用する</button>
+    </div>
+  </div>
+</div>
 @section('content')
 @csrf
 <main>
   <div class="main36-wrap">
+    @include('header')
     <div class="main-up">
       <div class="main-content">
         <div class="main-folder">
-          <div class="main-folder-header">
+          <!-- <div class="main-folder-header">
             <h2>フォルダ</h2>
-          </div>
+          </div> -->
           <div class="main36-folder-btn">
             <input type="text" name="name" id="folder36-name" value="" placeholder="フォルダを追加する">
             <input type="submit" value="追加" id="submit36-folder">
@@ -22,13 +38,13 @@
     </div>
     <div class="main-down">
       <div class="tabs">
-      <input id="all" type="radio" name="tab_item" checked>
-      <label class="tab_item" id="tab1" for="all"><div id="tab_name1"></div></label>
-      <input id="programming" type="radio" name="tab_item">
-      <label class="tab_item" id="tab2" for="programming"><div id="tab_name2"></div></label>
-      <input id="design" type="radio" name="tab_item">
-      <label class="tab_item" id="tab3" for="design"><div id="tab_name3"></div></label>
-      <div class="tab_content" id="all_content">
+      <input id="tab_content1" type="radio" name="tab_item" checked>
+      <label class="tab_item" id="tab1" for="tab_content1"><div id="tab_name1"></div></label>
+      <input id="tab_content2" type="radio" name="tab_item">
+      <label class="tab_item" id="tab2" for="tab_content2"><div id="tab_name2"></div></label>
+      <input id="tab_content3" type="radio" name="tab_item">
+      <label class="tab_item" id="tab3" for="tab_content3"><div id="tab_name3"></div></label>
+      <div class="tab_content" id="tab_content1_sub">
       <div class="main-content" id="content1">
         <div class="main-task">
           <div class="main36-task-add">
@@ -68,7 +84,7 @@
         </div>
     </div>
   </div>
-    <div class="tab_content" id="programming_content">
+    <div class="tab_content" id="tab_content2_sub">
       <div class="main-content" id="content2">
           <div class="main-task">
           <div class="main36-task-add">
@@ -108,7 +124,7 @@
           </div>
       </div>
     </div>
-    <div class="tab_content" id="design_content">
+    <div class="tab_content" id="tab_content3_sub">
       <div class="main-content" id="content3">
           <div class="main-task">
           <div class="main36-task-add">
@@ -150,8 +166,9 @@
     </div>
   </div>
 </div>
+@include('footer')
+</div>
 </main>
 
-@include('footer')
 @endsection
 
