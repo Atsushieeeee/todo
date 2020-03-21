@@ -141,10 +141,13 @@
 
 #delete-folder{
   width: 40px;
-  margin: 5px 5px ;
+  height: 30px;
+  margin: 10px 5px ;
   background: rgb(221, 62, 14);
   border: none;
   border-radius: 3px;
+  justify-content: center;
+  align-items: center;
 }
 
 i {
@@ -160,7 +163,7 @@ i {
 }
 
 .task36-name{
-  width: 50%;
+  width: 60%;
 }
 
 .task36-submit{
@@ -171,6 +174,7 @@ i {
   border: none;
   border-radius: 3px;
   font-size: 13px;
+  margin-left: 15px;
 }
 
 #task-name{
@@ -228,13 +232,15 @@ i {
 }
 
 .task36limit{
+  height: 40px;
   font-size: 12px;
-  width: 18%;
+  width: 50%;
 }
 
 .cookieTask_limit{
+  height: 40px;
   font-size: 12px;
-  width: 18%;
+  width: 50%;
 }
 
 .cookieTask-text{
@@ -243,6 +249,7 @@ i {
 
 #delete{
   width: 40px;
+  height: 30px;
   margin: 5px 5px;
   background: #BDBDBD;
   color: #424242;
@@ -267,7 +274,7 @@ i {
 
 /*タブのスタイル*/
 .tab_item {
-  width: calc(100%/3);
+  width: 33.33333%;
   height: 50px;
   border-bottom: 3px solid #00CED2;
   background-color: #d9d9d9;
@@ -356,4 +363,82 @@ input[name="tab_item"] {
   .select_time input[type="radio"]:checked + label[for="select3"], .select_time input[type="radio"]:checked + label[for="select6"], .select_time input[type="radio"]:checked + label[for="select9"] {
     background-color: #FBAE45;
     color: #fff;
+  }
+
+  .main36-task-add-down{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .limit-area{
+    height: 40px;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media screen and (max-width: 1010px){
+    .main36-task-add{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .task36-name{
+      height: 30px;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    .main36-task-add-down{
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .select_time label{
+      width: 60px;
+    }
+
+    .limit-area{
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cookieTask-add{
+      padding: 5px;
+    }
+
+    .cookieTask-text{
+      font-size: 10px;
+    }
+
+    .task36limit{
+      height: 10px;
+      font-size: 8px;
+      width: 100%;
+    }
+
+    .cookieTask_limit{
+      font-size: 8px;
+      height: 10px;
+      width: 100%;
+    }
+
+    #delete{
+      height: 30px;
+      width: 30px;
+      margin: 5px 0px;
+    }
+
+    .main-task-info-header-title{
+      width: 55%;
+    }
+
+    .main-task-info-header-settime{
+      width: 30%;
+    }
+
+    .main-task-info-header-delete{
+      width: 15%;
+    }
   }
