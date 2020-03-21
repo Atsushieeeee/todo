@@ -49,15 +49,17 @@
         <div class="main-task">
           <div class="main36-task-add">
             <input type="text" name="name" class="task36-name" id="task-name1" value="" placeholder="タスクを追加する">
-            <div class="select_time" id="time1">
-              <input type="radio" name="hr" id="select1" value="1.5" checked="">
-              <label for="select1">36hr</label>
-              <input type="radio" name="hr" id="select2" value="1">
-              <label for="select2">24hr</label>
-              <input type="radio" name="hr" id="select3" value="0.5">
-              <label for="select3">12hr</label>
+            <div class="main36-task-add-down">
+              <div class="select_time" id="time1">
+                <input type="radio" name="hr" id="select1" value="1.5" checked="">
+                <label for="select1">36hr</label>
+                <input type="radio" name="hr" id="select2" value="1">
+                <label for="select2">24hr</label>
+                <input type="radio" name="hr" id="select3" value="0.5">
+                <label for="select3">12hr</label>
+              </div>
+              <input type="submit" value="追加" class="task36-submit" id="submit-task1" class="set">
             </div>
-            <input type="submit" value="追加" class="task36-submit" id="submit-task1" class="set">
           </div>
           <div class="main-task-info">
             <div class="main36-task-info-header">
@@ -89,15 +91,17 @@
           <div class="main-task">
           <div class="main36-task-add">
             <input type="text" name="name" class="task36-name" id="task-name2" value="" placeholder="タスクを追加する">
-            <div class="select_time" id="time2">
-              <input type="radio" name="hr" id="select4" value="1.5" checked="">
-              <label for="select4">36hr</label>
-              <input type="radio" name="hr" id="select5" value="1">
-              <label for="select5">24hr</label>
-              <input type="radio" name="hr" id="select6" value="0.5">
-              <label for="select6">12hr</label>
+            <div class="main36-task-add-down">
+              <div class="select_time" id="time2">
+                <input type="radio" name="hr" id="select4" value="1.5" checked="">
+                <label for="select4">36hr</label>
+                <input type="radio" name="hr" id="select5" value="1">
+                <label for="select5">24hr</label>
+                <input type="radio" name="hr" id="select6" value="0.5">
+                <label for="select6">12hr</label>
+              </div>
+              <input type="submit" value="追加" class="task36-submit" id="submit-task2" class="set">
             </div>
-            <input type="submit" value="追加" class="task36-submit" id="submit-task2" class="set">
           </div>
             <div class="main-task-info">
             <div class="main36-task-info-header">
@@ -129,15 +133,17 @@
           <div class="main-task">
           <div class="main36-task-add">
             <input type="text" name="name" class="task36-name" id="task-name3" value="" placeholder="タスクを追加する">
-            <div class="select_time" id="time3">
-              <input type="radio" name="hr" id="select7" value="1.5" checked="">
-              <label for="select7">36hr</label>
-              <input type="radio" name="hr" id="select8" value="1">
-              <label for="select8">24hr</label>
-              <input type="radio" name="hr" id="select9" value="0.5">
-              <label for="select9">12hr</label>
+            <div class="main36-task-add-down">
+              <div class="select_time" id="time3">
+                <input type="radio" name="hr" id="select7" value="1.5" checked="">
+                <label for="select7">36hr</label>
+                <input type="radio" name="hr" id="select8" value="1">
+                <label for="select8">24hr</label>
+                <input type="radio" name="hr" id="select9" value="0.5">
+                <label for="select9">12hr</label>
+              </div>
+              <input type="submit" value="追加" class="task36-submit" id="submit-task3" class="set">
             </div>
-            <input type="submit" value="追加" class="task36-submit" id="submit-task3" class="set">
           </div>
             <div class="main-task-info">
             <div class="main36-task-info-header">
