@@ -2,7 +2,7 @@
   <div class="header-wrap">
     <div class="header-left">
       <div class="site_title_header">
-        <img src="img/36todo.png" alt="" width="150px" height="60px">
+        <img src="{{{asset('img/36todo.png')}}}" alt="" width="150px" height="60px">
       </div>
     </div>
     <div class="header-right">
