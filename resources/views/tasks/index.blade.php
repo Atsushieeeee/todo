@@ -8,9 +8,9 @@
     <div class="main-left">
       <div class="main-content">
         <div class="main-folder">
-          <div class="main-folder-header">
+          <!-- <div class="main-folder-header">
             <h2>フォルダ</h2>
-          </div>
+          </div> -->
           <div class="main-folder-btn">
             <a href="{{ route('folders.create') }}" class="folder-add-btn">
               フォルダを追加する
@@ -18,8 +18,10 @@
           </div>
           <div class="main-folder-list">
             @foreach($folders as $folder)
-              <a href="{{ route('tasks.index', ['id' => $folder->id]) }}" class="main-folder-add">
-                <p class="main-folder-add-title  {{ $current_folder_id === $folder->id ? 'active' : '' }}">{{ $folder->title }}</p>
+              <a href="{{ route('tasks.index', ['id' => $folder->id]) }}" class="main-folder-add {{ $current_folder_id === $folder->id ? 'active' : '' }}">
+                <p class="main-folder-add-title  ">{{ $folder->title }}</p>
+                <i class="far fa-trash-alt"></i>
+                <i class="fas fa-cog"></i>
               </a>
             @endforeach
           </div>
@@ -29,9 +31,9 @@
     <div class="main-right">
       <div class="main-content">
         <div class="main-task">
-          <div class="main-task-header">
+          <!-- <div class="main-task-header">
             <h2>タスク</h2>
-          </div>
+          </div> -->
           <div class="main-task-btn">
             <a href="{{ route('tasks.create', ['id' => $current_folder_id]) }}" class="task-add-btn">
               タスクを追加する
@@ -73,6 +75,6 @@
   </div>
 </main>
 
-@include('footer')
+<!-- @include('footer') -->
 @endsection
 

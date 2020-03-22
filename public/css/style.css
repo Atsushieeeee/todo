@@ -20,9 +20,15 @@ a{
 }
 
 main{
+<<<<<<< Updated upstream
   width: 100%;
   height: 100%;
   background: #F2F2F2;
+=======
+  width: 100vw;
+  height: 100vh;
+  background: #fbfaf5;
+>>>>>>> Stashed changes
 }
 
 ul, li{
@@ -81,6 +87,7 @@ header{
 }
 
 .header-right-info-item{
+  color: #FFF;
   font-size: 12px;
 }
 
@@ -113,21 +120,25 @@ footer{
 
 /* メイン */
 
-.main-wrap{
+/* .main-wrap{
   display: flex;
   flex-direction: row;
-}
+} */
 
 .main-content{
+  padding-top: 10px;
   background: #FFF;
-  border: solid 1px #BDBDBD;
-  border-radius: 5px;
+  border-top: solid 1px #BDBDBD;
+  border-right: solid 1px #BDBDBD;
+  border-left: solid 1px #BDBDBD;
+  /* border-radius: 5px; */
 }
+
 /* メイン左側 */
 
 .main-left{
-  width: 40%;
-  padding: 50px;
+  /* width: 40%; */
+  padding: 20px 20px 0px;
 }
 
 
@@ -145,44 +156,84 @@ footer{
 }
 
 .main-folder-btn{
-  margin: 15px 10px;
+  width: 40vw;
+  margin: 10px auto 20px;
   text-align: center;
   border: 1px solid #BDBDBD;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .folder-add-btn{
   display: block;
   text-decoration: none;
-  color: #6E6E6E;
+  background-color: rgb(74, 203, 247);
+  color: #FFF;
   font-size: 15px;
   line-height: 40px;
 }
 
+.main-folder-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .main-folder-add{
+  width: 100%;
   height: 40px;
+  box-sizing: border-box;
   line-height: 40px;
   font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  border-top: #BDBDBD solid 1px;
+}
+
+.main-folder-list a:not(:last-child){
+  border-right: 1px solid #BDBDBD;
 }
 
 .main-folder-add.active{
-  color: #FFF;
-}
-
-.main-folder-add-title{
-  border-top: #BDBDBD solid 1px;
-  padding-left: 15px;
-}
-
-.main-folder-add-title.active{
+  width: 500vw;
   background: #00BFFF;
   color: #FFF;
 }
 
+.main-folder-add:not(.active) .fa-trash-alt,.main-folder-add:not(.active) .fa-cog{
+  display: none;
+}
+
+.main-folder-add-title{
+  width: 80%;
+  text-align: center;
+  /* padding-left: 15px; */
+}
+
+.main-folder-add:not(.active) .main-folder-add-title{
+  width: 100%;
+}
+
+.fa-trash-alt{
+  text-align: center;
+  width: 10%;
+  line-height: 40px;
+  font-size: 18px;
+  color: red;
+}
+
+.fa-cog{
+  text-align: center;
+  width: 10%;
+  line-height: 40px;
+  float: right;
+  font-size: 18px;
+  color: rgba(70, 69, 69, 0.61);
+}
+
 /* メイン右側 */
 .main-right{
-  width: 60%;
-  padding: 50px;
+  /* width: 60%; */
+  padding: 0px 20px 20px;
 }
 
 .main-task-header{
@@ -199,16 +250,18 @@ footer{
 }
 
 .main-task-btn{
-  margin: 15px 10px;
+  width: 40vw;
+  margin: 10px auto 20px;
   text-align: center;
   border: 1px solid #BDBDBD;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .task-add-btn{
   display: block;
   text-decoration: none;
-  color: #6E6E6E;
+  background-color: rgb(74, 203, 247);
+  color: #FFF;
   font-size: 15px;
   line-height: 40px;
 }
@@ -217,6 +270,7 @@ footer{
   display: flex;
   flex-direction: row;
   border-top: #BDBDBD solid 1px;
+  border-bottom: #BDBDBD solid 1px;
 }
 
 .main-task-info-header h3{
@@ -252,7 +306,7 @@ footer{
   display: flex;
   flex-direction: row;
   height: 40px;
-  border-top: #BDBDBD solid 1px;
+  border-bottom: 1px solid #BDBDBD;
 }
 
 .main-task-info-add-left{
@@ -277,12 +331,17 @@ footer{
 }
 
 .status{
+  width: 48px;
   font-weight: bold;
   margin:5px;
   padding: 5px;
   border-radius: 3px;
   color: #FFF;
   background: #c0c0c0;
+}
+
+.status p{
+  text-align: center;
 }
 
 .status-danger{
