@@ -175,6 +175,5 @@
 @include('footer')
 </div>
 </main>
-
 @endsection
 
