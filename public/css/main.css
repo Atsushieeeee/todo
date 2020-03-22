@@ -1,0 +1,444 @@
+.overlay{
+  display:none;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.6);
+  position:fixed;
+  z-index:2;
+}
+.btn_area{
+  height:90%;
+  width: 85%;
+  margin: 30px 100px;
+  background:linear-gradient(135deg, #42e695 0%,#3bb2b8 100%);
+  z-index:3;
+  display: flex;
+  flex-direction: column;
+}
+
+.site_title img{
+}
+
+.site_info li{
+  font-size: 13px;
+  color: #696969;
+  padding:5px;
+}
+.site_use button{
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  width: 30%;
+  height: 40px;
+  background: #FFAF90;
+  color: #FFF;
+  display:block;
+}
+
+.site_title, .site_info, .site_use{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site_info, .site_use{
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site_title_header{
+  height: 60px;
+  width: 100px;
+}
+
+.main36-wrap{
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-up{
+  margin: 10px auto 0px;
+  width: 80%;
+}
+
+.main-down{
+  margin: 15px 10px;
+  border-radius: 5px;
+  /* margin-top: 15px; */
+}
+
+#folder36-name{
+  width: 80%;
+  height: 40px;
+  margin: 10px 25px;
+}
+
+#submit36-folder{
+  width: 25%;
+  height: 40px;
+  margin: 10px 25px;
+  font-weight: bold;
+  background: #00BFFF;
+  color: #FFF;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+#tab_name1,#tab_name2,#tab_name3{
+  display: flex;
+  flex-direction: row;
+}
+
+.hide{
+  display: none;
+}
+
+.main36-folder-btn{
+  flex-direction: row;
+  display: flex;
+}
+
+#folder-name{
+  width: 80%;
+  height: 40px;
+  margin: 15px auto;
+}
+
+#submit-folder{
+  width: 25%;
+  height: 40px;
+  margin: 10px auto;
+  font-weight: bold;
+  background: #00BFFF;
+  color: #FFF;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+#cookieFolder1, #cookieFolder2, #cookieFolder3{
+  border-top: 1px solid #BDBDBD;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  flex-direction: row;
+  display: flex;
+}
+
+#cookieFolder-text1, #cookieFolder-text2, #cookieFolder-text3{
+  width: 85%;
+  color: #FFF;
+  padding-left:10px ;
+}
+
+
+#delete-folder{
+  width: 40px;
+  height: 30px;
+  margin: 10px 5px ;
+  background: rgb(221, 62, 14);
+  border: none;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-size: 18px;
+  color: #FFF;
+}
+
+.main36-task-add{
+  margin: 15px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.task36-name{
+  width: 60%;
+}
+
+.task36-submit{
+  width: 120px;
+  font-weight: bold;
+  background: #00BFFF;
+  color: #FFF;
+  border: none;
+  border-radius: 3px;
+  font-size: 13px;
+  margin-left: 15px;
+}
+
+#task-name{
+  width: 75%;
+  height: 40px;
+}
+
+#submit-task{
+  width: 25%;
+  height: 40px;
+  margin: 0 20px;
+  border-radius: 3px;
+  background: #2cb4ad;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cookieTask-add{
+  height: 50px;
+  padding: 5px 20px;
+  border-top: 1px solid #BDBDBD;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  line-height: 40px;
+  color: #696969;
+}
+
+.main36-task-info-header{
+  height: 30px;
+  padding: 5px 0;
+  line-height: 20px;
+  display: flex;
+  flex-direction: row;
+  border-top: #BDBDBD solid 1px;
+  /* justify-content: space-around; */
+  font-size: 14px;
+  color: #696969;
+}
+
+.main-task-info-header-title{
+  width: 55%;
+  text-align: center;
+}
+
+.main-task-info-header-settime{
+  width: 35%;
+  text-align: center;
+}
+
+.main-task-info-header-delete{
+  width: 10%;
+  text-align: center;
+}
+
+.task36limit{
+  height: 40px;
+  font-size: 12px;
+  width: 50%;
+}
+
+.cookieTask_limit{
+  height: 40px;
+  font-size: 12px;
+  width: 50%;
+}
+
+.cookieTask-text{
+  width: 55%;
+}
+
+#delete{
+  width: 40px;
+  height: 30px;
+  margin: 5px 5px;
+  background: #BDBDBD;
+  color: #424242;
+  border: none;
+  border-radius: 3px;
+}
+
+.main36-task-info-list{
+  /* display: flex;
+  flex-direction: row; */
+}
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  margin-top: 50px;
+  background-color: #F2F2F2;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  /* width: 700px; */
+  margin: 0 auto;
+  
+}
+
+/*タブのスタイル*/
+.tab_item {
+  width: 33.33333%;
+  height: 50px;
+  border-bottom: 3px solid #00CED2;
+  background-color: #d9d9d9;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #565656;
+  display: none;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  /* padding: 40px 40px 0; */
+  clear: both;
+  overflow: hidden;
+}
+
+
+/*選択されているタブのコンテンツのみを表示*/
+#tab_content1:checked ~ #tab_content1_sub,
+#tab_content2:checked ~ #tab_content2_sub,
+#tab_content3:checked ~ #tab_content3_sub {
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: #00CED2;
+  /* background-color: #424242; */
+  color: #fff;
+}
+
+#content1,#content2,#content3{
+  display: none;
+}
+
+
+.select_time input{
+      display: none;
+  }
+.select_time label{
+      display: block;
+      float: left;
+      cursor: pointer;
+      width: 80px;
+      margin: 0;
+      padding: 12px 5px;
+      border-right: 1px solid #abb2b7;
+      background: #bdc3c7;
+      color: #555e64;
+      font-size: 14px;
+      text-align: center;
+      line-height: 1;
+      transition: .2s;
+  }
+  .select_time label:first-of-type{
+      border-radius: 3px 0 0 3px;
+  }
+  .select_time label:last-of-type{
+      border-right: 0px;
+      border-radius: 0 3px 3px 0;
+  }
+  .select_time input[type="radio"]:checked + label[for="select1"], .select_time input[type="radio"]:checked + label[for="select4"], .select_time input[type="radio"]:checked + label[for="select7"]{
+      background-color: #00CED2;
+      color: #fff;
+  }
+
+  .select_time input[type="radio"]:checked + label[for="select2"], .select_time input[type="radio"]:checked + label[for="select5"], .select_time input[type="radio"]:checked + label[for="select8"]  {
+    background-color: #FFAF90;
+    color: #fff;
+  }
+
+  .select_time input[type="radio"]:checked + label[for="select3"], .select_time input[type="radio"]:checked + label[for="select6"], .select_time input[type="radio"]:checked + label[for="select9"] {
+    background-color: #FBAE45;
+    color: #fff;
+  }
+
+  .main36-task-add-down{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .limit-area{
+    height: 40px;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media screen and (max-width: 1010px){
+    .main36-task-add{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .task36-name{
+      height: 30px;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    .main36-task-add-down{
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .select_time label{
+      width: 60px;
+    }
+
+    .limit-area{
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cookieTask-add{
+      padding: 5px;
+    }
+
+    .cookieTask-text{
+      font-size: 10px;
+    }
+
+    .task36limit{
+      height: 10px;
+      font-size: 8px;
+      width: 100%;
+    }
+
+    .cookieTask_limit{
+      font-size: 8px;
+      height: 10px;
+      width: 100%;
+    }
+
+    #delete{
+      height: 30px;
+      width: 30px;
+      margin: 5px 0px;
+    }
+
+    .main-task-info-header-title{
+      width: 55%;
+    }
+
+    .main-task-info-header-settime{
+      width: 30%;
+    }
+
+    .main-task-info-header-delete{
+      width: 15%;
+    }
+  }

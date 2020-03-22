@@ -1,9 +1,9 @@
 <header>
   <div class="header-wrap">
     <div class="header-left">
-      <a href="{{url('/')}}">
-        <h1>todo app</h1>
-      </a>  
+      <div class="site_title_header">
+        <img src="{{{asset('img/36todo.png')}}}" alt="" width="150px" height="60px">
+      </div>
     </div>
     <div class="header-right">
       <div class="header-right-info">
@@ -15,7 +15,7 @@
         @csrf
         </form>
         @else
-          <a class="header-right-info-item" href="{{ route('login') }}">ログイン</a>
+          <a class="header-right-info-item" href="{{ route('login') }}">ログインして利用する → ログイン</a>
           ｜
           <a class="header-right-info-item" href="{{ route('register') }}">会員登録</a>
         @endif
