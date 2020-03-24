@@ -62,6 +62,9 @@
                     <div class="date">
                       <p>{{ $task->formatted_due_date }}</p>
                     </div>
+                    <button type="submit" class="task-delete">
+                      <i class="far fa-trash-alt"></i>
+                    </button>
                     <a class="edit" href="{{ route('tasks.edit', ['id' => $task->folder_id, 'task_id' => $task->id]) }}">
                       編集
                     </a>
