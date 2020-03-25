@@ -62,10 +62,12 @@
                     <div class="date">
                       <p>{{ $task->formatted_due_date }}</p>
                     </div>
-                    <button type="submit" class="task-delete">
-                      <i class="far fa-trash-alt"></i>
-                    </button>
-                    <a class="edit" href="{{ route('tasks.edit', ['id' => $task->folder_id, 'task_id' => $task->id]) }}">
+                    <form action="{{ action('TaskController@destroy', $task->id) }}" id="form_{{ $task->id }}" method="post" style="display:inline">
+                    {{ csrf_field() }}
+                    {{ method_field('delete') }}
+                      <a href="#" data-id="{{ $task->id }}" onclick="deletePost(this);" class="fs12">[x]</a>
+                    </form>
+                      <a class="edit" href="{{ route('tasks.edit', ['id' => $task->folder_id, 'task_id' => $task->id]) }}">
                       編集
                     </a>
                   </div>
@@ -77,6 +79,15 @@
     </div>
   </div>
 </main>
+<script>
+function deletePost(e) {
+  'use strict';
+
+  if (confirm('are you sure?')) {
+    document.getElementById('form_' + e.dataset.id).submit();
+  }
+}
+</script>
 
 <!-- @include('footer') -->
 @endsection
