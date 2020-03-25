@@ -98,6 +98,17 @@ class TaskController extends Controller
         ]);
     }
 
+    #レコードの削除
+    public function destroy($id)
+    {
+    #削除処理
+    $task = Task::findOrFail($id);
+    $task->delete();
+
+    return redirect('/')->with('flash_message', 'Post Deleted!');
+    
+    }
+
     private function checkRelation(Folder $folder, Task $task)
     {
     if ($folder->id !== $task->folder_id) {
