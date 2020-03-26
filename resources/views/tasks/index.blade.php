@@ -65,7 +65,9 @@
                     <form action="{{ action('TaskController@destroy', $task->id) }}" id="form_{{ $task->id }}" method="post" style="display:inline">
                     {{ csrf_field() }}
                     {{ method_field('delete') }}
-                      <a href="#" data-id="{{ $task->id }}" onclick="deletePost(this);" class="fs12">[x]</a>
+                      <a href="#" data-id="{{ $task->id }}" onclick="deletePost(this);" class="fs12">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
                     </form>
                       <a class="edit" href="{{ route('tasks.edit', ['id' => $task->folder_id, 'task_id' => $task->id]) }}">
                       編集
