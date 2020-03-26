@@ -228,7 +228,6 @@ footer{
   text-align: center;
   width: 10%;
   line-height: 40px;
-  float: right;
   font-size: 18px;
   color: rgba(70, 69, 69, 0.61);
 }
@@ -362,7 +361,6 @@ footer{
 
 .edit{
   margin-right: 10px;
-  padding-left: 20px;
   line-height: 40px;
 }
 
