@@ -68,7 +68,7 @@
                       <a href="#" data-id="{{ $task->id }}" onclick="deletePost(this);" class="fs12">[x]</a>
                     </form>
                       <a class="edit" href="{{ route('tasks.edit', ['id' => $task->folder_id, 'task_id' => $task->id]) }}">
-                      編集
+                        <i class="fas fa-cog"></i>
                     </a>
                   </div>
               </div>
