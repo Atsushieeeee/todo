@@ -20,9 +20,15 @@
             @foreach($folders as $folder)
               <a href="{{ route('tasks.index', ['id' => $folder->id]) }}" class="main-folder-add {{ $current_folder_id === $folder->id ? 'active' : '' }}">
                 <p class="main-folder-add-title  ">{{ $folder->title }}</p>
-                <i class="far fa-trash-alt"></i>
-                <i class="fas fa-cog"></i>
               </a>
+              <form action="{{ action('FolderController@destroy', $folder->id) }}" id="form_{{ $folder->id }}" method="post" style="display:inline">
+                {{ csrf_field() }}
+                {{ method_field('delete') }}
+                <a href="#" data-id="{{ $folder->id }}" onclick="deletePost(this);" class="fs12">
+                  <i class="far fa-trash-alt"></i>
+                </a>
+              </form>
+              <i class="fas fa-cog"></i>
             @endforeach
           </div>
         </div>
