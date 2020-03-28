@@ -27,4 +27,16 @@ class FolderController extends Controller
         'id' => $folder->id,
     ]);
     }
+
+    #フォルダの削除
+    public function destroy($id)
+    {
+    #削除処理
+    $folder = Folder::findOrFail($id);
+    $folder->delete();
+
+    return redirect('/')->with('flash_message', 'Post Deleted!');
+    
+    }
+    
 }
