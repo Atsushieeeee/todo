@@ -18,10 +18,11 @@
           </div>
           <div class="main-folder-list">
             @foreach($folders as $folder)
+            <div class="main-folder-select {{ $current_folder_id === $folder->id ? 'active' : '' }}">
               <a href="{{ route('tasks.index', ['id' => $folder->id]) }}" class="main-folder-add {{ $current_folder_id === $folder->id ? 'active' : '' }}">
                 <p class="main-folder-add-title  ">{{ $folder->title }}</p>
               </a>
-              <form action="{{ action('FolderController@destroy', $folder->id) }}" id="form_{{ $folder->id }}" method="post" style="display:inline">
+              <form class="main-folder-delete" action="{{ action('FolderController@destroy', $folder->id) }}" id="form_{{ $folder->id }}" method="post">
                 {{ csrf_field() }}
                 {{ method_field('delete') }}
                 <a href="#" data-id="{{ $folder->id }}" onclick="deletePost(this);" class="fs12">
@@ -29,6 +30,7 @@
                 </a>
               </form>
               <i class="fas fa-cog"></i>
+            </div>
             @endforeach
           </div>
         </div>
@@ -68,7 +70,7 @@
                     <div class="date">
                       <p>{{ $task->formatted_due_date }}</p>
                     </div>
-                    <form action="{{ action('TaskController@destroy', $task->id) }}" id="form_{{ $task->id }}" method="post" style="display:inline">
+                    <form action="{{ action('TaskController@destroy', $task->id) }}" id="form_{{ $task->id }}" method="post">
                     {{ csrf_field() }}
                     {{ method_field('delete') }}
                       <a href="#" data-id="{{ $task->id }}" onclick="deletePost(this);" class="fs12">
@@ -90,8 +92,7 @@
 <script>
 function deletePost(e) {
   'use strict';
-
-  if (confirm('are you sure?')) {
+  if (confirm('削除しますか？')) {
     document.getElementById('form_' + e.dataset.id).submit();
   }
 }

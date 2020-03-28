@@ -187,24 +187,39 @@ footer{
   box-sizing: border-box;
   line-height: 40px;
   font-size: 14px;
+}
+
+.main-folder-select:not(:last-child){
+  border-right: 1px solid #BDBDBD;
+}
+
+.main-folder-add.active{
+  color: #FFF;
+}
+
+.main-folder-select{
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   border-top: #BDBDBD solid 1px;
 }
 
-.main-folder-list a:not(:last-child){
-  border-right: 1px solid #BDBDBD;
-}
-
-.main-folder-add.active{
+.main-folder-select.active{
   width: 500vw;
-  background: #00BFFF;
+  background: #00CED2;
   color: #FFF;
 }
 
-.main-folder-add:not(.active) .fa-trash-alt,.main-folder-add:not(.active) .fa-cog{
+.main-folder-select:not(.active) .fa-trash-alt,.main-folder-select:not(.active) .fa-cog{
   display: none;
 }
+
+.main-folder-select:not(.active) .main-folder-delete{
+  display: none;
+}
+
 
 .main-folder-add-title{
   width: 80%;
@@ -216,8 +231,15 @@ footer{
   width: 100%;
 }
 
-.fa-trash-alt{
+.main-folder-delete{
+  width: 10%;
+  height: 40px;
+  margin: 0;
   text-align: center;
+  margin: 0px 10px;
+}
+
+.fa-trash-alt{
   width: 10%;
   line-height: 40px;
   font-size: 18px;
