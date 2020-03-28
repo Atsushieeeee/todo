@@ -18,6 +18,8 @@ Route::group(['middleware' => 'auth'], function() {
         Route::post('/folders/{folder}/tasks/{task}/edit', 'TaskController@edit');
 
     });
+
+    Route::delete('/folders/{folder}', 'FolderController@destroy');
     Route::delete('/folders/{folder}/tasks', 'TaskController@destroy');
 });
 
