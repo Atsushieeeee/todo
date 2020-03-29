@@ -4,8 +4,14 @@
   margin: 0 auto;
 }
 
-.edit-content{
+.edit-content-task{
   height: 450px;
+  background: #FFF;
+  border-radius: 5px;
+}
+
+.edit-content-folder{
+  height: 250px;
   background: #FFF;
   border-radius: 5px;
 }
