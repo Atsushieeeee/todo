@@ -7,6 +7,9 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::get('/folders/create', 'FolderController@showCreateForm')->name('folders.create');
     Route::post('/folders/create', 'FolderController@create');
+
+    Route::get('/folders/{folder}/edit', 'FolderController@showEditForm')->name('folders.edit');
+    Route::post('/folders/{folder}/edit', 'FolderController@edit');
     
     Route::group(['middleware' => 'can:view,folder'], function() {
         Route::get('/folders/{folder}/tasks', 'TaskController@index')->name('tasks.index');
