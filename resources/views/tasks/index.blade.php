@@ -29,7 +29,9 @@
                   <i class="far fa-trash-alt"></i>
                 </a>
               </form>
-              <i class="fas fa-cog"></i>
+              <a class="edit" href="{{ route('folders.edit',['folder' => $folder]) }}">
+                <i class="fas fa-cog"></i>
+              </a>
             </div>
             @endforeach
           </div>
