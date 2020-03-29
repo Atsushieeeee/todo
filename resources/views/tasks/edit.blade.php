@@ -4,7 +4,7 @@
 @section('content')
 <main>
   <div class="edit-wrap">
-    <div class="edit-content">
+    <div class="edit-content-task">
       <div class="edit-header">
         <h2>タスクを編集する</h2>
       </div>

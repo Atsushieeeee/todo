@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
   <link rel="stylesheet" href="{{ asset('css/add-folder.css') }}">
   <link rel="stylesheet" href="{{ asset('css/add-task.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/edit-task.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/edit.css') }}">
   <link rel="stylesheet" href="{{ asset('css/login.css') }}">
   <link rel="stylesheet" href="{{ asset('css/register.css') }}">
   <link rel="stylesheet" href="{{ asset('css/reset-password.css') }}">

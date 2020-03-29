@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Folder;
 use App\Http\Requests\CreateFolder;
+// use App\Http\Requests\EditFolder;
 use Illuminate\Support\Facades\Auth;
 
 class FolderController extends Controller
@@ -27,6 +28,42 @@ class FolderController extends Controller
         'id' => $folder->id,
     ]);
     }
+
+    /**
+     * フォルダ編集フォーム
+     * @param Folder $folder
+     * @return \Illuminate\View\View
+     */
+    public function showEditForm(Folder $folder)
+    {
+        // $this->checkRelation($folder);
+
+        return view('folders/edit', [
+        'folder' => $folder,
+        'id' => $folder->folder_id,
+        'folder_id' => $folder->id
+    ]);
+    }
+
+    /**
+     * フォルダ編集
+     * @param Folder $folder
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function edit(Folder $folder ,CreateFolder $request)
+    {
+        // $this->checkRelation($folder, $task);
+
+        $folder->title = $request->title;
+        $folder->save();
+
+        return redirect()->route('tasks.index', [
+            'folder' => $folder,
+            'id' => $folder->folder_id,
+            'folder_id' => $folder->id
+            ]);
+    }
+
 
     #フォルダの削除
     public function destroy($id)
