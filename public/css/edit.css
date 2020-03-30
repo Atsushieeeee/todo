@@ -1,19 +1,45 @@
 .edit-wrap{
-  width: 50%;
+  width: 100%;
   padding-top: 30px;
-  margin: 0 auto;
 }
 
 .edit-content-task{
+  width: 80%;
   height: 450px;
+  margin: 0 auto;
   background: #FFF;
   border-radius: 5px;
 }
 
+.edit-content-task input{
+  border: 1px solid #696969;
+  border-radius: 3px;
+}
+
+.edit-content-task h3{
+  font-size: 15px;
+  color:#696969;
+  margin: 5px 10px;
+}
+
+
 .edit-content-folder{
+  width: 80%;
   height: 250px;
+  margin: 0 auto;
   background: #FFF;
   border-radius: 5px;
+}
+
+.edit-content-folder h3{
+  font-size: 15px;
+  color:#696969;
+  margin: 5px 10px;
+}
+
+.edit-content-folder input{
+  border: 1px solid #696969;
+  border-radius: 3px;
 }
 
 .edit-name-wrap{

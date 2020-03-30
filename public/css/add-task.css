@@ -1,14 +1,21 @@
 .task-wrap{
-  width: 50%;
+  width: 100%;
   padding-top: 30px;
-  margin: 0 auto;
 }
 
 .task-content{
+  width: 80%;
   height: 400px;
+  margin: 0 auto;
   background: #FFF;
   border-radius: 5px;
 }
+
+.task-content input{
+  border: 1px solid #696969;
+  border-radius: 3px;
+}
+
 
 .task-name-wrap{
   text-align: center;

@@ -1,13 +1,19 @@
 .folder-wrap{
-  width: 50%;
+  width: 100%;
   padding-top: 30px;
-  margin: 0 auto;
 }
 
 .folder-content{
-  height: 360px;
+  width: 80%;
+  height: 280px;
+  margin: 0 auto;
   background: #FFF;
   border-radius: 5px;
+}
+
+.folder-content input{
+  border: 1px solid #696969;
+  border-radius: 3px;
 }
 
 .folder-name-wrap{
