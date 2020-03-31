@@ -1,7 +1,7 @@
 @extends('layouts.common')
 @include('head')
+<div class="container">
 @include('header')
-
 @section('content')
 
 <main>
@@ -146,6 +146,7 @@ function deletePost(e) {
 }
 </script>
 
-<!-- @include('footer') -->
+@include('footer')
+</div>
 @endsection
 
