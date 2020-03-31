@@ -1,20 +1,20 @@
 @extends('layouts.common')
 @include('head')
+<div class="container">
 @include('header')
 @section('content')
 <main>
-  <div class="container">
-    <div class="row">
-      <div class="col col-md-offset-3 col-md-6">
-        <div class="text-center">
-          <p>お探しのページは見つかりませんでした。</p>
-          <a href="{{ route('home') }}" class="btn">
-            ホームへ戻る
-          </a>
-        </div>
+  <div class="error-wrap">
+    <div class="error-content">
+      <div class="error-content-text">
+        <p>サーバーエラーにつきページが表示されません。</p>
+        <a href="{{ route('home') }}" class="error-content-btn">
+          ホームへ戻る
+        </a>
       </div>
     </div>
   </div>
 </main>
 @include('footer')
+</div>
 @endsection

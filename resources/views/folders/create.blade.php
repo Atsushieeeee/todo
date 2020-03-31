@@ -1,5 +1,6 @@
 @extends('layouts.common')
 @include('head')
+<div class="container">
 @include('header')
 @section('content')
 <main>
@@ -31,4 +32,5 @@
   </div>
 </main>
 @include('footer')
+</div>
 @endsection

@@ -1,6 +1,7 @@
 .home-wrap{
-  width: 50%;
-  padding-top: 30px;
+  width: 100%;
+  /* height: 100%; */
+  /* padding-top: 30px; */
   margin: 0 auto;
 }
 
@@ -11,12 +12,13 @@
 }
 
 .home-header p{
+  color: #5a5858;
   font-size: 15px;
   line-height: 50px;
 }
 
 .home-body-btn-wrap{
-  margin-top: 30px;
+  margin: 15px 0px;
   text-align: center;
 }
 
