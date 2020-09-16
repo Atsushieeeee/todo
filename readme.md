@@ -1,6 +1,6 @@
 # todo
 ## PHP Laravel練習用todo app
-PHP Laravelの練習用のtodo appです。
+PHP Laravelの練習用のtodo appです。<br>
 ユーザーログイン、フォルダの作成・削除・編集、タスクの作成・削除・編集を実装。
 
 ## 使用言語
